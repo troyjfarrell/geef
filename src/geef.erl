@@ -1,5 +1,5 @@
 -module(geef).
--export([start/0, hex_to_raw/1, object_exists/2]).
+-export([start/0, hex_to_raw/1, object_exists/2, libgit2_version/0]).
 
 start() ->
     case code:priv_dir(geef) of
@@ -13,6 +13,9 @@ start() ->
 
 hex_to_raw(_Val) ->
     nif_error(?LINE).    
+
+libgit2_version() ->
+    nif_error(?LINE).
 
 object_exists(_Val, _Val2) ->
     nif_error(?LINE).

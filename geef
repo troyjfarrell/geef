@@ -14,6 +14,9 @@ main([Command|_Args]) ->
         [Object|_None] = _Rest,
         Exists = geef:object_exists(Path, Object),
         io:format("Exists: ~w~n", [Exists]);
+      "libgit2_version" ->
+        Version = geef:libgit2_version(),
+        io:format("libgit2 version: ~B.~B.~B~n", Version);
       _Else ->
         usage()
     end;
