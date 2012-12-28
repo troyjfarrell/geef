@@ -60,8 +60,8 @@ geef_libgit2_version(ErlNifEnv *env, int argc, const ERL_NIF_TERM argv[])
   git_libgit2_version(&major, &minor, &rev);
 
   ERL_NIF_TERM emajor = enif_make_int(env, major);
-  ERL_NIF_TERM eminor= enif_make_int(env, minor);
-  ERL_NIF_TERM erev= enif_make_int(env, rev);
+  ERL_NIF_TERM eminor = enif_make_int(env, minor);
+  ERL_NIF_TERM erev = enif_make_int(env, rev);
 
   return enif_make_list3(env, emajor, eminor, erev);
 }
